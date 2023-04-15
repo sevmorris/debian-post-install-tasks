@@ -195,24 +195,4 @@ Delete unnecessary libraries:
 
 `sudo deborphan | xargs sudo apt-get -y remove --purge`
 
-
 </details>
-
-<details>
-  <summary>Remove x11 and everything that uses it, including all configuration
-  When I don't need a GUI...</summary>
-
-
-`sudo apt-get purge libx11.* libqt.*`
-
-<br>
-
-`sudo apt autoremove`
-
-
-<details>
-  <summary>Remove legacy services</summary>
-
-`sudo apt-get --purge remove xinetd nis tftpd tftpd-hpa telnetd rsh-server rsh-redone-server`
-
----
