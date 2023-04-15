@@ -150,7 +150,7 @@ And finally:
 ---
 
 </details>
-
+<br>
 
 ### Miscellany
 
