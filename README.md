@@ -21,8 +21,8 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 
 <details>
   <summary>Set up ssh</summary>
-
 <br>
+
 Enable and start sshd at boot time:
 <br>
 
@@ -66,7 +66,6 @@ ip a | grep "inet "﻿
 ```
 
 </details>
-<br>
 
 <details>
   <summary>Install Oh My Bash</summary>
@@ -108,7 +107,6 @@ Reload `.bashrc`:
 <br>
 
 </details>
-<br>
 
 <details>
   <summary>Boot to console</summary>
@@ -148,7 +146,6 @@ sudo systemctl set-default multi-user.target
 <br>
 
 </details>
-<br>
 
 <details>
   <summary>Add root password</summary>
@@ -168,7 +165,6 @@ To switch to the root shell
 <br>
 
 </details>
-<br>
 
 <details>
   <summary>Run Deborphan</summary>
@@ -199,7 +195,6 @@ sudo deborphan | xargs sudo apt-get -y remove --purge
 <br>
 
 </details>
-<br>
 
 ### Remove x11 and everything that uses it, including all configuration
 When I don't need a GUI...
