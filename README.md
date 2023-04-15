@@ -179,47 +179,40 @@ To switch to the root shell
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
 <br>
 
+<br>
 Start out with a dry run:
 
-```
-deborphan --guess-all
-```
-<br>
 
+`deborphan --guess-all`
+
+<br>
 Remove unnecessary data packages:
 
-```
-sudo deborphan --guess-data | xargs sudo aptitude -y purge
-```
-<br>
+`sudo deborphan --guess-data | xargs sudo aptitude -y purge`
 
+<br>
 Delete unnecessary libraries:
 
-```
-sudo deborphan | xargs sudo apt-get -y remove --purge
-```
-<br>
+`sudo deborphan | xargs sudo apt-get -y remove --purge`
+
 
 </details>
 
-### Remove x11 and everything that uses it, including all configuration
-When I don't need a GUI...
+<details>
+  <summary>Remove x11 and everything that uses it, including all configuration
+  When I don't need a GUI...</summary>
+
+
+`sudo apt-get purge libx11.* libqt.*`
+
 <br>
 
-```
-sudo apt-get purge libx11.* libqt.*
-```
+`sudo apt autoremove`
 
-```
-sudo apt autoremove
-```
-<br>
 
-### Remove legacy services
+<details>
+  <summary>Remove legacy services</summary>
 
-```
-sudo apt-get --purge remove xinetd nis tftpd tftpd-hpa telnetd rsh-server rsh-redone-server
-```
-<br>
+`sudo apt-get --purge remove xinetd nis tftpd tftpd-hpa telnetd rsh-server rsh-redone-server`
 
 ---
