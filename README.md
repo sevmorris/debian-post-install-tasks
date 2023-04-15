@@ -91,38 +91,23 @@ _If  starting from scratch this was created by oh-my-bash. If the file already e
 
 Change the theme to `Zork`
 
-Add the following alias near the bottom:
+Paste all this at the bottom of .bashrc:
+(This is my current .bashrc)
+<br>
+
 ```
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
-```
-<br>
-
-Then this, replacing \<TEXT> with whatever you would like FIGlet to display:
-
-```
-echo "$(tput bold)$(tput setaf 3)"
-figlet <TEXT>
-```
-<br>
-
-And finally, add `neofetch` at the bottom
-<br>
-
-Reload .bashrc:
-
-`source .bashrc`
-<br>
-
-Here's an example of the bottom few lines of my current .bashrc:
-
-```
-alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is r>
 
 echo "$(tput bold)$(tput setaf 3)"
 figlet Debian!
 
 neofetch
 ```
+
+<br>
+Reload .bashrc:
+
+`source .bashrc`
 
 ---
 
