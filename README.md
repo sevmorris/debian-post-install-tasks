@@ -104,8 +104,6 @@ Reload `.bashrc` to see the changes immediately: `source .bashrc`
 
 <details>
   <summary>Boot to console</summary>
-
-### Boot to console
 <br>
 
 - Backup the configuration file:
@@ -147,17 +145,8 @@ sudo systemctl set-default multi-user.target
 </details>
 <br>
 
-### Change motd
-(message of the day)
-<br>
-
-The directory `/etc/update-motd.d` contains numbered shell scripts which are run in order.
-<br>
-You can modify or remove them, and/or add your own.
-<br>
-
 <details>
-  <summary>Deborphan</summary>
+  <summary>Run Deborphan</summary>
 
 ### Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html)
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
@@ -187,13 +176,11 @@ sudo deborphan | xargs sudo apt-get -y remove --purge
 </details>
 <br>
 
-Another option is to edit `/etc/UPower/UPower.conf` and change `IgnoreLid=` to `true`
-<br><br><br>
-
-### Add root password
+<details>
+  <summary>Add root password</summary>
 <br>
 
-- **Switch to root and add a password:**
+Switch to root and add a password:
 
 ```
 sudo -i
@@ -201,12 +188,16 @@ passwd
 ```
 <br>
 
-- **To switch to the root shell:** `su -`
-<br><br><br>
+To switch to the root shell
 
+ `su -`
+<br>
+
+</details>
+<br>
 
 ### Remove x11 and everything that uses it, including all configuration
-Because I don't need a GUI.
+When I don't need a GUI...
 <br><br>
 
 ```
