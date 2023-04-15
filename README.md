@@ -151,6 +151,10 @@ And finally:
 
 </details>
 
+
+### Miscellany
+<br>
+
 <details>
   <summary>Add root password</summary>
 <br>
@@ -196,3 +200,20 @@ Delete unnecessary libraries:
 ---
 
 </details>
+
+<details>
+  <summary>Add a user to sudoers</summary>
+
+<br>
+Edit sudoers file:
+<br>
+
+`visudo`
+
+<br>
+Add the following to the bottom (changing username):
+<br>
+
+`username ALL=(ALL) NOPASSWD:ALL`
+
+---
