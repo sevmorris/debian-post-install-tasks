@@ -106,34 +106,36 @@ Reload `.bashrc` to see the changes immediately: `source .bashrc`
 ### Boot to console
 <br>
 
-- **Backup the configuration file:**
+- Backup the configuration file:
+<br>
 
 ```
 sudo cp -n /etc/default/grub /etc/default/grub.backup
 ```
 <br>
 
-- **Edit the configuration file:**
+Edit the configuration file:
+<br>
 
 ```
 sudo nano /etc/default/grub
 ```
 
-- **Comment out:** `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
+- Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
-- **Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
+- Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
 
-- **Uncomment:** `GRUB_TERMINAL="console"`
-<br><br><br>
+- Uncomment: `GRUB_TERMINAL="console"`
 
-- **Save the file and apply changes:**
+- Save the file and apply changes:
 
 ```
 sudo update-grub
 ```
 <br>
 
-- **And finally:**
+- And finally:
+<br>
 
 ```
 sudo systemctl set-default multi-user.target
