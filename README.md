@@ -41,6 +41,36 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 </details>
 
 <details>
+  <summary>Edit .bashrc</summary>
+<br>
+
+_This assumes I've installed everything above_
+<br>
+
+Change the theme to `Zork`
+
+Paste all this at the bottom of .bashrc:
+<br>
+
+```
+alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
+
+echo "$(tput bold)$(tput setaf 3)"
+figlet Debian!
+
+neofetch
+```
+
+<br>
+Reload .bashrc:
+
+`source .bashrc`
+
+---
+
+</details>
+
+<details>
   <summary>Set up ssh</summary>
 
 <br>
@@ -73,36 +103,6 @@ Show ip address:
 <br>
 
 `ip a | grep "inet "﻿`
-
----
-
-</details>
-
-<details>
-  <summary>Edit .bashrc</summary>
-<br>
-
-_This assumes I've installed everything above_
-<br>
-
-Change the theme to `Zork`
-
-Paste all this at the bottom of .bashrc:
-<br>
-
-```
-alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
-
-echo "$(tput bold)$(tput setaf 3)"
-figlet Debian!
-
-neofetch
-```
-
-<br>
-Reload .bashrc:
-
-`source .bashrc`
 
 ---
 
