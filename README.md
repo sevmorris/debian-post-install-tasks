@@ -133,7 +133,7 @@ Edit the configuration file:
 
 Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
-Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
+Change GRUB\_CMDLINE\_LINUX "" to: `GRUB_CMDLINE_LINUX="text"`
 
 Uncomment: `GRUB_TERMINAL="console"`
 
