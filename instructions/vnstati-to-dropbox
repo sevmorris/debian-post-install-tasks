@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Place script in /etc/cron.daily
-# Generate a vnstati bandwidth usage png, append the date, and save it to Dropbox
-vnstati -s -i wlp4s0 -o /home/seven/network-log-"`date +"%d-%m-%Y"`".png
