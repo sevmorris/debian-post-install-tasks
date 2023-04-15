@@ -81,7 +81,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
   <summary>Edit .bashrc</summary>
 <br>
 
-__If  starting from scratch this was created by oh-my-bash. If the file already existed omb backed it up and replaced it.__
+_If  starting from scratch this was created by oh-my-bash. If the file already existed omb backed it up and replaced it._
 <br>
 
 Change the theme to `Zork`
