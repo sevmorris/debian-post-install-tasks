@@ -108,7 +108,7 @@ figlet <TEXT>
 And finally, add `neofetch` at the bottom
 <br>
 
-Reload `.bashrc`:
+Reload .bashrc:
 
 `source .bashrc`
 <br>
