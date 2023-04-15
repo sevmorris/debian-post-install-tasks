@@ -38,30 +38,25 @@ Confirm sshd is enabled at boot time:
 Check server status:
 <br>
 
-```
-sudo service ssh status
-```
+`sudo service ssh status`
+
 <br>
 Start sshd:
 <br>
 
-```
-sudo systemctl start ssh.service
-```
+`sudo systemctl start ssh.service`
+
 <br>
 Restart the server:
 <br>
 
-```
-sudo systemctl restart ssh.service
-```
+`sudo systemctl restart ssh.service`
+
 <br>
 Show ip address:
 <br>
 
-```
-ip a | grep "inet "﻿
-```
+`ip a | grep "inet "﻿``
 
 </details>
 
@@ -69,9 +64,7 @@ ip a | grep "inet "﻿
   <summary>Install Oh My Bash</summary>
 <br>
 
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-```
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"`
 
 </details>
 
