@@ -210,7 +210,6 @@ Edit sudoers file:
 
 `visudo`
 
-<br>
 Add the following to the bottom (changing username):
 <br>
 
