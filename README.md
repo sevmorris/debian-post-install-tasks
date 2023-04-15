@@ -69,7 +69,7 @@ ifconfig | grep "inet "﻿
 ```
 
 </details>
-
+<br>
 
 ### <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash)
 <br>
@@ -82,7 +82,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 - **Edit** .bashrc **and change the theme to** <span style="color:red">Zork</span>
 <br><br><br>
 
-## <a name="7"></a>Using [FIGlet](https://github.com/cmatsuoka/figlet) & [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu)[:arrow_up:](#toc)
+### Using [FIGlet](https://github.com/cmatsuoka/figlet) & [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu)
 <br>
 
 - **For <span style="color:red">Figlet</span>, add the following to** .bashrc, **replacing** \<TEXT> **with whatever you would like to display:**
@@ -103,7 +103,7 @@ figlet <TEXT>
 <details>
   <summary>Boot to console</summary>
 
-## Boot to console
+### Boot to console
 <br>
 
 - **Backup the configuration file:**
@@ -141,8 +141,9 @@ sudo systemctl set-default multi-user.target
 <br><br>
 
 </details>
+<br>
 
-## Change motd
+### Change motd
 (message of the day)
 <br>
 
@@ -150,7 +151,7 @@ sudo systemctl set-default multi-user.target
 You can modify or remove them, and/or add your own.**
 <br><br><br>
 
-## Comprehensive update & cleanup alias
+### Comprehensive update & cleanup alias
 <br>
 
 - **Create a file called** .bash\_aliases **and add the following line:**
@@ -181,7 +182,7 @@ fi
 <details>
   <summary>Deborphan</summary>
 
-## Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html)
+### Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html)
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
 <br><br>
 
@@ -212,7 +213,7 @@ sudo deborphan | xargs sudo apt-get -y remove --purge
 Another option is to edit `/etc/UPower/UPower.conf` and change `IgnoreLid=` to `true`
 <br><br><br>
 
-## Add root password
+### Add root password
 <br>
 
 - **Switch to root and add a password:**
@@ -227,7 +228,7 @@ passwd
 <br><br><br>
 
 
-## Remove x11 and everything that uses it, including all configuration
+### Remove x11 and everything that uses it, including all configuration
 Because I don't need a GUI.
 <br><br>
 
@@ -240,7 +241,7 @@ sudo apt autoremove
 ```
 <br><br><br>
 
-## Remove legacy services
+### Remove legacy services
 <br><br>
 
 ```
