@@ -20,8 +20,6 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 <br>
 Install Github CLI
 
-<br><br>
-
 ```
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
