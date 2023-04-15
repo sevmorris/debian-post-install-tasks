@@ -76,7 +76,7 @@ Reload .bashrc:
 
 <br>
 Enable and start sshd at boot time:
-<br>
+<br><br>
 
 `sudo systemctl enable ssh.service`
 
