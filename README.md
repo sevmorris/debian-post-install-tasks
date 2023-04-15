@@ -39,31 +39,26 @@ Enable and start sshd at boot time:
 
 `sudo systemctl enable ssh.service`
 
-<br>
 Confirm sshd is enabled at boot time:
 <br>
 
 `sudo systemctl is-enabled ssh.service`
 
-<br>
 Check server status:
 <br>
 
 `sudo service ssh status`
 
-<br>
 Start sshd:
 <br>
 
 `sudo systemctl start ssh.service`
 
-<br>
 Restart the server:
 <br>
 
 `sudo systemctl restart ssh.service`
 
-<br>
 Show ip address:
 <br>
 
