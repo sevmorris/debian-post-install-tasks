@@ -28,6 +28,14 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt install gh -y
 ```
 
+<br>
+Install Oh My Bash
+<br><br>
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+```
+
 ---
 
 </details>
@@ -65,18 +73,6 @@ Show ip address:
 <br>
 
 `ip a | grep "inet "﻿`
-
----
-
-</details>
-
-<details>
-  <summary>Install Oh My Bash</summary>
-<br>
-
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-```
 
 ---
 
