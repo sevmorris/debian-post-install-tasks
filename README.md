@@ -113,6 +113,17 @@ Reload .bashrc:
 `source .bashrc`
 <br>
 
+Here's an example of the bottom few lines of my current .bashrc:
+
+```
+alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is r>
+
+echo "$(tput bold)$(tput setaf 3)"
+figlet Debian!
+
+neofetch
+```
+
 ---
 
 </details>
