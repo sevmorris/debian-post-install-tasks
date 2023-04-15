@@ -16,7 +16,7 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 ```
 <br>
 
-I sometimes set up ssh and switch to it to finish the rest of the following steps:
+I sometimes set up and connect via ssh at this point:
 <br><br>
 
 <details>
@@ -62,7 +62,7 @@ Show ip address:
 <br>
 
 ```
-ifconfig | grep "inet "﻿
+ip a | grep "inet "﻿
 ```
 
 </details>
