@@ -135,7 +135,7 @@ Comment out:
 `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
 <br>
-Change GRUB\_CMDLINE\_LINUX "" to:
+Change GRUB_CMDLINE_LINUX "" to:
 
 `GRUB_CMDLINE_LINUX="text"`
 
