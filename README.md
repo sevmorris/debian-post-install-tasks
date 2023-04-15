@@ -1,21 +1,7 @@
 
-# <a name="toc"></a>Debian/Ubuntu Post-Install Tasks
+# Debian Post-Install Tasks
 
-- [Install a bunch of stuff](#1)
-- [Install Oh My Bash](#2)
-- [Using FIGlet & neofetch](#7)
-- [Boot to console](#4)
-- [Modify motd](#8)
-- [Remove whoopsie (crash reporter)](#9)
-- [Comprehensive update & cleanup alias](#10)
-- [Using Deborphan](#11)
-- [Change lid close behavior](#5)
-- [Add root password](#3)
-- [Turn off display at boot](#6)
-- [Remove x11 and everything that uses it](#12)
 <br><br>
-
-**PREREQUISITE**
 
 ### Updates & upgrades...
 <br>
@@ -26,7 +12,7 @@ sudo apt upgrade
 ```
 <br>
 
-### <a name="1"></a>Install some stuff [:arrow_up:](#toc)
+### Install some stuff
 <br>
 
 ```
@@ -85,7 +71,7 @@ ifconfig | grep "inet "﻿
 </details>
 
 
-### <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash) [:arrow_up:](#toc)
+### <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash)
 <br>
 
 ```
@@ -117,7 +103,7 @@ figlet <TEXT>
 <details>
   <summary>Boot to console</summary>
 
-## <a name="4"></a>Boot to console [:arrow_up:](#toc)
+## Boot to console
 <br>
 
 - **Backup the configuration file:**
@@ -156,7 +142,7 @@ sudo systemctl set-default multi-user.target
 
 </details>
 
-## <a name="8"></a>Change motd [:arrow_up:](#toc)
+## Change motd
 (message of the day)
 <br>
 
@@ -164,11 +150,7 @@ sudo systemctl set-default multi-user.target
 You can modify or remove them, and/or add your own.**
 <br><br><br>
 
-## <a name="9"></a>Remove whoopsie (crash reporter) [:arrow_up:](#toc)
-Whoopsie is a service that sends a crash log to Ubuntu. Although useful, it can be removed.
-<br><br><br>
-
-## <a name="10"></a>Comprehensive update & cleanup alias [:arrow_up:](#toc)
+## Comprehensive update & cleanup alias
 <br>
 
 - **Create a file called** .bash\_aliases **and add the following line:**
@@ -195,7 +177,11 @@ fi
 [Source](https://askubuntu.com/a/1305901)
 <br><br><br>
 
-## <a name="11"></a>Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html) [:arrow_up:](#toc)
+
+<details>
+  <summary>Deborphan</summary>
+
+## Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html)
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
 <br><br>
 
@@ -220,30 +206,13 @@ sudo deborphan | xargs sudo apt-get -y remove --purge
 ```
 <br><br>
 
-## <a name="5"></a>Change lid close behavior [:arrow_up:](#toc)
-<br>
-
-- **Edit logind.conf:**
-
-```
-sudo nano /etc/systemd/logind.conf
-```
-
-- **Change** `#HandleLidSwitch=suspend` **to** `HandleLidSwitch=ignore`
-<br><br>
-
-- **Apply the changes:**
-
-```
-sudo service systemd-logind restart
-```
-
+</details>
 <br>
 
 Another option is to edit `/etc/UPower/UPower.conf` and change `IgnoreLid=` to `true`
 <br><br><br>
 
-## <a name="3"></a>Add root password [:arrow_up:](#toc)
+## Add root password
 <br>
 
 - **Switch to root and add a password:**
@@ -257,24 +226,8 @@ passwd
 - **To switch to the root shell:** `su -`
 <br><br><br>
 
-## <a name="6"></a>Turn off display at boot [:arrow_up:](#toc)
-Not typically necessary, but I had to do this with my MacBook Air running Ubuntu with the lid closed.
-<br><br>
 
-- **Edit the crontab file:**
-
-```
-sudo crontab -e
-```
-
-- **Add the following line:**
-
-```
-@reboot sudo bash -c "echo 0 > /sys/class/backlight/intel_backlight/brightness;"
-```
-<br><br><br>
-
-## <a name="12"></a>Remove x11 and everything that uses it, including all configuration [:arrow_up:](#toc)
+## Remove x11 and everything that uses it, including all configuration
 Because I don't need a GUI.
 <br><br>
 
@@ -287,7 +240,7 @@ sudo apt autoremove
 ```
 <br><br><br>
 
-## <a name="6"></a>Remove legacy services [:arrow_up:](#toc)
+## Remove legacy services
 <br><br>
 
 ```
@@ -295,8 +248,5 @@ sudo apt-get --purge remove xinetd nis tftpd tftpd-hpa telnetd rsh-server rsh-re
 ```
 
 <br><br><br>
-
-
-[:arrow_up:](#toc)
 
 ---
