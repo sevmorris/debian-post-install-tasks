@@ -40,35 +40,44 @@ I typically set up ssh and switch to it to finish the rest of the following step
   <summary>Set up ssh</summary>
 <br>
 Enable and start sshd at boot time:
+
 ```
 sudo systemctl enable ssh.service
 ```
 <br>
 Confirm sshd is enabled at boot time:
+
 ```
 sudo systemctl is-enabled ssh.service
 ```
 <br>
 Check server status:
+
 ```
 sudo service ssh status
 ```
 <br>
+
 Start sshd:
+
 ```
 sudo systemctl start ssh.service
 ```
 <br>
+
 Restart the server:
+
 ```
 sudo systemctl restart ssh.service
 ```
 <br>
+
 Show ip address:
 
 ```
 ifconfig | grep "inet "﻿
 ```
+
 </details>
 
 
