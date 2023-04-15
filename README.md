@@ -19,7 +19,7 @@ sudo apt upgrade
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
 
-I typically set up ssh and switch to it to finish the rest of the following steps.
+I sometimes set up ssh and switch to it to finish the rest of the following steps.
 <br><br>
 
 <details>
@@ -79,22 +79,23 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 ```
 <br>
 
-- Edit `.bashrc` and change the theme to <span style="color:red">Zork</span>
-<br><br><br>
-
 ### Using [FIGlet](https://github.com/cmatsuoka/figlet) & [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu)
 <br>
 
-- For Figlet, add the following to `.bashrc` replacing \<TEXT> with whatever you would like to display
+Edit `.bashrc` and:
+
+- Change the theme to <span style="color:red">Zork</span>
+- Add the following, replacing \<TEXT> with whatever you would like FIGlet to display
 
 ```
 echo "$(tput bold)$(tput setaf 3)"
 figlet <TEXT>
 ```
-<br><br>
+<br>
 
-- For neofetch, add the line `neofetch` to `.bashrc`
-<br><br>
+- Add the line `neofetch` at the bottom
+
+<br><br><br>
 
 - Reload `.bashrc` to see the changes immediately: `source .bashrc`
 <br><br><br>
