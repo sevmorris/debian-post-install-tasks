@@ -21,8 +21,8 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 
 <details>
   <summary>Set up ssh</summary>
-<br>
 
+<br>
 Enable and start sshd at boot time:
 <br>
 
@@ -56,7 +56,7 @@ Restart the server:
 Show ip address:
 <br>
 
-`ip a | grep "inet "﻿``
+`ip a | grep "inet "﻿`
 
 </details>
 
@@ -64,7 +64,9 @@ Show ip address:
   <summary>Install Oh My Bash</summary>
 <br>
 
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"`
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+```
 
 </details>
 
