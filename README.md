@@ -63,6 +63,7 @@ neofetch
 
 <br>
 Reload .bashrc:
+<br><br>
 
 `source .bashrc`
 
