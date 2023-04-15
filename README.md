@@ -38,7 +38,7 @@ I typically set up ssh and switch to it to finish the rest of the following step
 
 <details>
   <summary>Set up ssh</summary>
-	
+
 		<br>
 		Enable and start sshd at boot time:
 		<br>
@@ -82,7 +82,7 @@ I typically set up ssh and switch to it to finish the rest of the following step
 		ifconfig | grep "inet "﻿
 		```
 
-		</details>
+</details>
 
 
 ## <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash) [:arrow_up:](#toc)
