@@ -98,7 +98,7 @@ alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" d
 ```
 <br>
 
-Add the following near the bottom, replacing \<TEXT> with whatever you would like FIGlet to display
+Then this, replacing \<TEXT> with whatever you would like FIGlet to display:
 
 ```
 echo "$(tput bold)$(tput setaf 3)"
@@ -106,7 +106,7 @@ figlet <TEXT>
 ```
 <br>
 
-Add `neofetch` at the bottom
+And finally, add `neofetch` at the bottom
 <br>
 
 Reload `.bashrc`:
@@ -117,21 +117,19 @@ Reload `.bashrc`:
 </details>
 
 <details>
-  <summary>Boot to console</summary>
-<br>
+  <summary>Boot to console (for hosts I'll only ssh into)</summary>
 
+<br>
 Backup the configuration file:
-
-```
-sudo cp -n /etc/default/grub /etc/default/grub.backup
-```
 <br>
 
-Edit the configuration file:
+`sudo cp -n /etc/default/grub /etc/default/grub.backup`
 
-```
-sudo nano /etc/default/grub
-```
+<br>
+Edit the configuration file:
+<br>
+
+`sudo nano /etc/default/grub`
 
 Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
@@ -139,19 +137,17 @@ Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
 
 Uncomment: `GRUB_TERMINAL="console"`
 
+<br>
 Save the file and apply changes:
-
-```
-sudo update-grub
-```
 <br>
 
+`sudo update-grub`
+
+<br>
 And finally:
-
-```
-sudo systemctl set-default multi-user.target
-```
 <br>
+
+`sudo systemctl set-default multi-user.target`
 
 </details>
 
