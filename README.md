@@ -10,15 +10,16 @@ sudo apt upgrade
 
 <details>
   <summary>Install some things</summary>
+
 <br>
 
 ```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
-<br>
 
 <br>
 Install Github CLI
+
 <br><br>
 
 ```
@@ -162,23 +163,21 @@ And finally:
 
 Switch to root and add a password:
 
-```
-sudo -i
-passwd
-```
-<br>
+`sudo -i`
 
+`passwd`
+
+<br>
 To switch to the root shell
 
  `su -`
-<br>
 
 </details>
 
 <details>
   <summary>Run Deborphan</summary>
-<br>
 
+<br>
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
 <br>
 
