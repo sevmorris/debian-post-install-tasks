@@ -17,7 +17,7 @@
 
 **PREREQUISITE**
 
-## Updates & upgrades...
+### Updates & upgrades...
 <br>
 
 ```
@@ -26,7 +26,7 @@ sudo apt upgrade
 ```
 <br>
 
-## <a name="1"></a>Install some stuff [:arrow_up:](#toc)
+### <a name="1"></a>Install some stuff [:arrow_up:](#toc)
 <br>
 
 ```
@@ -85,7 +85,7 @@ ifconfig | grep "inet "﻿
 </details>
 
 
-## <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash) [:arrow_up:](#toc)
+### <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash) [:arrow_up:](#toc)
 <br>
 
 ```
@@ -112,6 +112,10 @@ figlet <TEXT>
 
 - **Reload** .bashrc **to see the changes immediately:** `source .bashrc`
 <br><br><br>
+
+
+<details>
+  <summary>Boot to console</summary>
 
 ## <a name="4"></a>Boot to console [:arrow_up:](#toc)
 <br>
@@ -150,6 +154,8 @@ sudo systemctl set-default multi-user.target
 ```
 <br><br>
 
+</details>
+
 ## <a name="8"></a>Change motd [:arrow_up:](#toc)
 (message of the day)
 <br>
@@ -161,22 +167,6 @@ You can modify or remove them, and/or add your own.**
 ## <a name="9"></a>Remove whoopsie (crash reporter) [:arrow_up:](#toc)
 Whoopsie is a service that sends a crash log to Ubuntu. Although useful, it can be removed.
 <br><br><br>
-
-- **Remove whoopsie:**
-
-```
-sudo apt remove --auto-remove whoopsie
-```
-
-This will remove the whoopsie package and any other dependant packages which are no longer needed.
-<br><br>
-
-- **Purge your local/config files for whoopsie:**
-
-```
-sudo apt purge --auto-remove whoopsie
-```
-<br><br>
 
 ## <a name="10"></a>Comprehensive update & cleanup alias [:arrow_up:](#toc)
 <br>
