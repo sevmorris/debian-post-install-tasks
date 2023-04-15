@@ -121,31 +121,36 @@ Reload `.bashrc`:
 
 <br>
 Backup the configuration file:
-<br>
 
 `sudo cp -n /etc/default/grub /etc/default/grub.backup`
 
 <br>
 Edit the configuration file:
-<br>
 
 `sudo nano /etc/default/grub`
 
-Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
+<br>
+Comment out:
 
-Change GRUB\_CMDLINE\_LINUX "" to: `GRUB_CMDLINE_LINUX="text"`
+`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
-Uncomment: `GRUB_TERMINAL="console"`
+<br>
+Change GRUB\_CMDLINE\_LINUX "" to:
+
+`GRUB_CMDLINE_LINUX="text"`
+
+<br>
+Uncomment:
+
+`GRUB_TERMINAL="console"`
 
 <br>
 Save the file and apply changes:
-<br>
 
 `sudo update-grub`
 
 <br>
 And finally:
-<br>
 
 `sudo systemctl set-default multi-user.target`
 
