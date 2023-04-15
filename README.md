@@ -10,11 +10,6 @@
 ```
 sudo apt update
 sudo apt upgrade
-```
-
-<br>
-
-```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
 
