@@ -2,17 +2,16 @@
 ### Debian Post-Install Tasks & Miscellany
 <br>
 
-```
-sudo apt update
-sudo apt upgrade
-```
-<br>
-
 <details>
   <summary>Install some things</summary>
 
 <br>
+```
+sudo apt update
+sudo apt upgrade
+```
 
+<br>
 ```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
