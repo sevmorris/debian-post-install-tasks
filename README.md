@@ -76,26 +76,31 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 ```
 <br>
 
-### Using [FIGlet](https://github.com/cmatsuoka/figlet) & [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu)
+<details>
+  <summary>Edit .bashrc</summary>
 <br>
 
-Edit `.bashrc` and:
-
-- Change the theme to <span style="color:red">Zork</span>
+- Change the theme to `Zork`
 - Add the following, replacing \<TEXT> with whatever you would like FIGlet to display
 
 ```
 echo "$(tput bold)$(tput setaf 3)"
 figlet <TEXT>
 ```
-<br>
 
 - Add `neofetch` at the bottom
+- Add the following alias near the bottom:
+
+```
+alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
+```
 <br>
 
 Reload `.bashrc` to see the changes immediately: `source .bashrc`
 <br><br>
 
+</details>
+<br>
 
 <details>
   <summary>Boot to console</summary>
@@ -154,7 +159,7 @@ You can modify or remove them, and/or add your own.
 ### Comprehensive update & cleanup alias
 <br>
 
-- Create a file called `.bash\_aliases` and add the following line:
+- Create a file called `.bash_aliases` and add the following line:
 
 ```
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
