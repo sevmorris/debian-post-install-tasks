@@ -64,6 +64,8 @@ Show ip address:
 
 `ip a | grep "inet "﻿`
 
+---
+
 </details>
 
 <details>
