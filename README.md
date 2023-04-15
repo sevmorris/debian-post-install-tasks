@@ -81,10 +81,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
   <summary>Edit .bashrc</summary>
 <br>
 
+(This is the version created by oh-my-bash)
+<br>
+
 Change the theme to `Zork`
 
 Add the following alias near the bottom:
-
 ```
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 ```
