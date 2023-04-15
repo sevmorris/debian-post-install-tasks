@@ -153,7 +153,6 @@ And finally:
 
 
 ### Miscellany
-<br>
 
 <details>
   <summary>Add root password</summary>
@@ -210,6 +209,7 @@ Edit sudoers file:
 
 `visudo`
 
+<br>
 Add the following to the bottom (changing username):
 <br>
 
