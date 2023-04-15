@@ -28,6 +28,8 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt install gh -y
 ```
 
+---
+
 </details>
 
 <details>
@@ -76,6 +78,8 @@ Show ip address:
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
+---
+
 </details>
 
 <details>
@@ -108,6 +112,8 @@ Reload .bashrc:
 
 `source .bashrc`
 <br>
+
+---
 
 </details>
 
@@ -149,6 +155,8 @@ And finally:
 
 `sudo systemctl set-default multi-user.target`
 
+---
+
 </details>
 
 <details>
@@ -165,6 +173,8 @@ Switch to root and add a password:
 To switch to the root shell
 
  `su -`
+
+---
 
 </details>
 
@@ -190,5 +200,7 @@ Remove unnecessary data packages:
 Delete unnecessary libraries:
 
 `sudo deborphan | xargs sudo apt-get -y remove --purge`
+
+---
 
 </details>
