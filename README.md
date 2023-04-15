@@ -1,5 +1,5 @@
 
-### Debian Post-Install Tasks
+### Debian Post-Install Tasks & Miscellany
 <br>
 
 ```
@@ -8,13 +8,16 @@ sudo apt upgrade
 ```
 <br>
 
-Install some things
+<details>
+  <summary>Install some things</summary>
 <br>
 
 ```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
 <br>
+
+</details>
 
 <details>
   <summary>Set up ssh</summary>
@@ -65,32 +68,38 @@ ip a | grep "inet "﻿
 </details>
 <br>
 
-Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash)
+<details>
+  <summary>Install Oh My Bash</summary>
 <br>
 
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
-<br>
+
+</details>
 
 <details>
   <summary>Edit .bashrc</summary>
 <br>
 
-- Change the theme to `Zork`
-- Add the following, replacing \<TEXT> with whatever you would like FIGlet to display
+Change the theme to `Zork`
+
+Add the following alias near the bottom:
+
+```
+alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
+```
+<br>
+
+Add the following near the bottom, replacing \<TEXT> with whatever you would like FIGlet to display
 
 ```
 echo "$(tput bold)$(tput setaf 3)"
 figlet <TEXT>
 ```
+<br>
 
-- Add `neofetch` at the bottom
-- Add the following alias near the bottom:
-
-```
-alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
-```
+Add `neofetch` at the bottom
 <br>
 
 Reload `.bashrc`:
