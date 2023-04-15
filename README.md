@@ -86,13 +86,12 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
   <summary>Edit .bashrc</summary>
 <br>
 
-_This assumes oh-my-bash is installed_
+_This assumes I've installed everything above_
 <br>
 
 Change the theme to `Zork`
 
 Paste all this at the bottom of .bashrc:
-(This is my current .bashrc)
 <br>
 
 ```
