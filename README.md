@@ -26,16 +26,14 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 Enable and start sshd at boot time:
 <br>
 
-```
-sudo systemctl enable ssh.service
-```
+`sudo systemctl enable ssh.service`
+
 <br>
 Confirm sshd is enabled at boot time:
 <br>
 
-```
-sudo systemctl is-enabled ssh.service
-```
+`sudo systemctl is-enabled ssh.service`
+
 <br>
 Check server status:
 <br>
