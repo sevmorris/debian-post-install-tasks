@@ -1,9 +1,5 @@
 
 # Debian Post-Install Tasks
-
-<br><br>
-
-### Updates & upgrades...
 <br>
 
 ```
@@ -18,8 +14,9 @@ sudo apt upgrade
 ```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
+<br>
 
-I sometimes set up ssh and switch to it to finish the rest of the following steps.
+I sometimes set up ssh and switch to it to finish the rest of the following steps:
 <br><br>
 
 <details>
@@ -140,7 +137,7 @@ sudo update-grub
 ```
 sudo systemctl set-default multi-user.target
 ```
-<br><br>
+<br>
 
 </details>
 <br>
@@ -149,21 +146,22 @@ sudo systemctl set-default multi-user.target
 (message of the day)
 <br>
 
-**The folder** `/etc/update-motd.d` **contains numbered shell scripts which are run in order.<br>
-You can modify or remove them, and/or add your own.**
-<br><br><br>
+The directory `/etc/update-motd.d` contains numbered shell scripts which are run in order.
+<br>
+You can modify or remove them, and/or add your own.
+<br>
 
 ### Comprehensive update & cleanup alias
 <br>
 
-- **Create a file called** .bash\_aliases **and add the following line:**
+- Create a file called `.bash\_aliases` and add the following line:
 
 ```
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 ```
 <br>
 
-- **Add the following lines to** bashrc:
+- Add the following lines to bashrc:
 
 ```
 if [ -f ~/.bash_aliases ]; then
@@ -172,14 +170,13 @@ fi
 ```
 <br>
 
-- **Reload** .bashrc: `source .bashrc`
-<br><br>
+- Reload .bashrc: `source .bashrc`
+<br>
 
-	**Alternatively, you can simply add the alias to** .bashrc **instead of creating a separate aliases file.**
+	Alternatively, you can simply add the alias to .bashrc instead of creating a separate aliases file.
 <br><br>
 [Source](https://askubuntu.com/a/1305901)
-<br><br><br>
-
+<br><br>
 
 <details>
   <summary>Deborphan</summary>
