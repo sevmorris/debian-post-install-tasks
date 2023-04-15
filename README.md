@@ -79,13 +79,13 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 ```
 <br>
 
-- **Edit** .bashrc **and change the theme to** <span style="color:red">Zork</span>
+- Edit `.bashrc` and change the theme to <span style="color:red">Zork</span>
 <br><br><br>
 
 ### Using [FIGlet](https://github.com/cmatsuoka/figlet) & [neofetch](https://github.com/dylanaraps/neofetch/wiki/Installation#ubuntu)
 <br>
 
-- **For <span style="color:red">Figlet</span>, add the following to** .bashrc, **replacing** \<TEXT> **with whatever you would like to display:**
+- For Figlet, add the following to `.bashrc` replacing \<TEXT> with whatever you would like to display
 
 ```
 echo "$(tput bold)$(tput setaf 3)"
@@ -93,10 +93,10 @@ figlet <TEXT>
 ```
 <br><br>
 
-- **For <span style="color:red">neofetch</span>, add the line** `neofetch` **to** .bashrc.
+- For neofetch, add the line `neofetch` to `.bashrc`
 <br><br>
 
-- **Reload** .bashrc **to see the changes immediately:** `source .bashrc`
+- Reload `.bashrc` to see the changes immediately: `source .bashrc`
 <br><br><br>
 
 
