@@ -93,12 +93,11 @@ figlet <TEXT>
 ```
 <br>
 
-- Add the line `neofetch` at the bottom
+- Add `neofetch` at the bottom
+<br>
 
-<br><br><br>
-
-- Reload `.bashrc` to see the changes immediately: `source .bashrc`
-<br><br><br>
+Reload `.bashrc` to see the changes immediately: `source .bashrc`
+<br><br>
 
 
 <details>
