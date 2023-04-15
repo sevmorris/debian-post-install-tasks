@@ -16,7 +16,7 @@ sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan ap
 <br>
 Install Github CLI
 <br>
-(_Paste and run all lines together_)
+(Paste and run all lines together)
 <br><br>
 
 ```
