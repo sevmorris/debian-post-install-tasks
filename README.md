@@ -142,6 +142,26 @@ sudo systemctl set-default multi-user.target
 <br>
 
 <details>
+  <summary>Add root password</summary>
+<br>
+
+Switch to root and add a password:
+
+```
+sudo -i
+passwd
+```
+<br>
+
+To switch to the root shell
+
+ `su -`
+<br>
+
+</details>
+<br>
+
+<details>
   <summary>Run Deborphan</summary>
 <br>
 
@@ -172,29 +192,9 @@ sudo deborphan | xargs sudo apt-get -y remove --purge
 </details>
 <br>
 
-<details>
-  <summary>Add root password</summary>
-<br>
-
-Switch to root and add a password:
-
-```
-sudo -i
-passwd
-```
-<br>
-
-To switch to the root shell
-
- `su -`
-<br>
-
-</details>
-<br>
-
 ### Remove x11 and everything that uses it, including all configuration
 When I don't need a GUI...
-<br><br>
+<br>
 
 ```
 sudo apt-get purge libx11.* libqt.*
@@ -203,15 +203,13 @@ sudo apt-get purge libx11.* libqt.*
 ```
 sudo apt autoremove
 ```
-<br><br><br>
+<br>
 
 ### Remove legacy services
-<br><br>
 
 ```
 sudo apt-get --purge remove xinetd nis tftpd tftpd-hpa telnetd rsh-server rsh-redone-server
 ```
-
-<br><br><br>
+<br>
 
 ---
