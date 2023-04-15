@@ -1,5 +1,5 @@
 
-# Debian Post-Install Tasks
+### Debian Post-Install Tasks
 <br>
 
 ```
@@ -8,16 +8,13 @@ sudo apt upgrade
 ```
 <br>
 
-### Install some stuff
+Install some things
 <br>
 
 ```
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 ```
 <br>
-
-I sometimes set up and connect via ssh at this point:
-<br><br>
 
 <details>
   <summary>Set up ssh</summary>
@@ -68,7 +65,7 @@ ip a | grep "inet "﻿
 </details>
 <br>
 
-### <a name="2"></a>Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash)
+Install [Oh My Bash](https://github.com/ohmybash/oh-my-bash)
 <br>
 
 ```
@@ -96,8 +93,10 @@ alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" d
 ```
 <br>
 
-Reload `.bashrc` to see the changes immediately: `source .bashrc`
-<br><br>
+Reload `.bashrc`:
+
+`source .bashrc`
+<br>
 
 </details>
 <br>
@@ -106,8 +105,7 @@ Reload `.bashrc` to see the changes immediately: `source .bashrc`
   <summary>Boot to console</summary>
 <br>
 
-- Backup the configuration file:
-<br>
+Backup the configuration file:
 
 ```
 sudo cp -n /etc/default/grub /etc/default/grub.backup
@@ -115,27 +113,25 @@ sudo cp -n /etc/default/grub /etc/default/grub.backup
 <br>
 
 Edit the configuration file:
-<br>
 
 ```
 sudo nano /etc/default/grub
 ```
 
-- Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
+Comment out: `GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
-- Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
+Change GRUB\_CMDLINE\_LINUX "" to:** `GRUB_CMDLINE_LINUX="text"`
 
-- Uncomment: `GRUB_TERMINAL="console"`
+Uncomment: `GRUB_TERMINAL="console"`
 
-- Save the file and apply changes:
+Save the file and apply changes:
 
 ```
 sudo update-grub
 ```
 <br>
 
-- And finally:
-<br>
+And finally:
 
 ```
 sudo systemctl set-default multi-user.target
@@ -147,31 +143,31 @@ sudo systemctl set-default multi-user.target
 
 <details>
   <summary>Run Deborphan</summary>
+<br>
 
-### Using [Deborphan](https://manpages.ubuntu.com/manpages/bionic/man1/deborphan.1.html)
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
-<br><br>
+<br>
 
-- **Start out with a dry run:**
+Start out with a dry run:
 
 ```
 deborphan --guess-all
 ```
 <br>
 
-- **Remove unnecessary data packages:**
+Remove unnecessary data packages:
 
 ```
 sudo deborphan --guess-data | xargs sudo aptitude -y purge
 ```
 <br>
 
-- **Delete unnecessary libraries:**
+Delete unnecessary libraries:
 
 ```
 sudo deborphan | xargs sudo apt-get -y remove --purge
 ```
-<br><br>
+<br>
 
 </details>
 <br>
