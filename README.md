@@ -4,8 +4,10 @@
 
 3. My Debian post-install task list, without me, is useless. Without my Debian post-install task list, I am useless.
 
+<br>
+
 The steps are to be performed in the order shown.
-<br><br>
+<br>
 
 <details>
   <summary>Add root password/add new user/add user to sudoers</summary>
