@@ -137,8 +137,8 @@ passwd {username}
 # Add the new user to sudoers
 usermod -aG sudo {username}
 
-# Exit root environment
-exit
+# Switch to the new user
+su {username}
 ```
 
 
