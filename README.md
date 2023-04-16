@@ -111,7 +111,7 @@ rm ~/id_rsa.pub
 # Run each line separately
 sudo apt update
 sudo apt upgrade
-sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
+sudo apt -y install curl openssh-server ii git figlet tldr neofetch aptitude htop
 sudo apt install build-essential dkms linux-headers-$(uname -r)
 
 # Install Oh My Bash
