@@ -14,7 +14,7 @@ su -
 passwd
 
 # Create new user (changing {username} to desired username)
-useradd {username}
+adduser {username}
 
 # Add the new user to sudoers
 usermod -aG sudo {username}
