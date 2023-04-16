@@ -118,7 +118,7 @@ sudo reboot
 ### Miscellany
 
 <details>
-  <summary>Root password, new user, sudoers</summary>
+  <summary>Add a root password, add a new user, add new user to sudoers</summary>
 <br>
 
 ```
