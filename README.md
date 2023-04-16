@@ -37,10 +37,11 @@ _This assumes I've installed everything above_
 <br>
 
 Change the theme to `Zork`
+<br>
+
+Paste the following at the bottom of .bashrc
 
 ```
-# Paste the following at the bottom of .bashrc:
-
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
 echo "$(tput bold)$(tput setaf 3)"
@@ -49,9 +50,11 @@ figlet Debian!
 neofetch
 ```
 
+<br>
+Reload .bashrc
+
 ```
-# Reload .bashrc
-source .bashrc
+source ~/.bashrc
 ```
 
 ---
