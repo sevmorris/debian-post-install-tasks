@@ -50,7 +50,7 @@ _This assumes I've installed everything above_
 
 Change the theme to `Zork`
 
-Paste all this at the bottom of .bashrc:
+Paste the following at the bottom of .bashrc:
 <br>
 
 ```
@@ -62,9 +62,8 @@ figlet Debian!
 neofetch
 ```
 
+Reload .bashrc
 <br>
-Reload .bashrc:
-<br><br>
 
 `source .bashrc`
 
@@ -75,36 +74,25 @@ Reload .bashrc:
 <details>
   <summary>Set up ssh</summary>
 
-<br>
-Enable and start sshd at boot time:
-<br><br>
+```
+# Enable and start sshd at boot time:
+sudo systemctl enable ssh.service
 
-`sudo systemctl enable ssh.service`
+# Confirm sshd is enabled at boot time:
+sudo systemctl is-enabled ssh.service
 
-Confirm sshd is enabled at boot time:
-<br>
+# Check server status:
+sudo service ssh status
 
-`sudo systemctl is-enabled ssh.service`
+# Start sshd:
+sudo systemctl start ssh.service
 
-Check server status:
-<br>
+# Restart the server:
+sudo systemctl restart ssh.service
 
-`sudo service ssh status`
-
-Start sshd:
-<br>
-
-`sudo systemctl start ssh.service`
-
-Restart the server:
-<br>
-
-`sudo systemctl restart ssh.service`
-
-Show ip address:
-<br>
-
-`ip a | grep "inet "﻿`
+# Show ip address:
+ip a | grep "inet "﻿
+```
 
 ---
 
@@ -113,40 +101,29 @@ Show ip address:
 <details>
   <summary>Boot to console (for hosts I'll only ssh into)</summary>
 
-<br>
-Backup the configuration file:
+```
+#Backup the configuration file:
+sudo cp -n /etc/default/grub /etc/default/grub.backup
 
-`sudo cp -n /etc/default/grub /etc/default/grub.backup`
+# Edit the configuration file:
+sudo nano /etc/default/grub
 
-<br>
-Edit the configuration file:
+# Comment out (disable) GRUB_CMDLINE_LINUX_DEFAULT:
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
 
-`sudo nano /etc/default/grub`
+# Change GRUB_CMDLINE_LINUX "" to:
+GRUB_CMDLINE_LINUX="text"
 
-<br>
-Comment out:
+# Uncomment (enable) GRUB_TERMINAL:
 
-`GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
+GRUB_TERMINAL="console"
 
-<br>
-Change GRUB_CMDLINE_LINUX "" to:
+# Save the file and apply changes:
+sudo update-grub
 
-`GRUB_CMDLINE_LINUX="text"`
-
-<br>
-Uncomment:
-
-`GRUB_TERMINAL="console"`
-
-<br>
-Save the file and apply changes:
-
-`sudo update-grub`
-
-<br>
-And finally:
-
-`sudo systemctl set-default multi-user.target`
+# And finally:
+sudo systemctl set-default multi-user.target
+```
 
 ---
 
@@ -155,15 +132,13 @@ And finally:
 <details>
   <summary>Boot straight into Debian</summary>
 
-<br>
-Open the GRUB config file and set GRUB_TIMEOUT to 0
+```
+# Open the GRUB config file and set GRUB_TIMEOUT to 0
+sudo nano /etc/default/grub
 
-`sudo nano /etc/default/grub`
-
-<br>
-Update GRUB
-
-`sudo update-grub`
+# Update GRUB
+sudo update-grub
+```
 
 ---
 
@@ -194,7 +169,7 @@ passwd
 
 <br>
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
-<br>
+<br><br>
 
 ```
 # Start out with a dry run:
