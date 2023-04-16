@@ -16,19 +16,18 @@ passwd
 # Create new user (changing {username} to desired username)
 adduser {username}
 
-# Add the new user to sudoers
-usermod -aG sudo {username}
-
-# Check if the change was successful:
-groups {username}
-
 # Exit root
 exit
 
 # Switch to the new user
 su {username}
 
+# Add user account to the sudo group (enter root password when prompted)
+su - -c 'gpasswd -a '$USER' sudo'
+
 # Test sudo by listing the contents of the /root directory
+exit
+su {username}
 sudo ls -la /root
 ```
 
