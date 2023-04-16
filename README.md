@@ -15,8 +15,7 @@ sudo apt install build-essential dkms linux-headers-$(uname -r)
 # Install Oh My Bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-# Install Github CLI
-# (Paste and run the following all at once)
+# Install Github CLI (run the following all at once)
 
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
