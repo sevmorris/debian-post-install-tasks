@@ -124,11 +124,10 @@ source ~/.bashrc
   <summary>Boot to console/skip GRUB boot menu</summary>
 
 ```
-# To change boot target to console mode
+# Change boot target to console mode
 sudo systemctl set-default multi-user.target
 
-# To skip boot options, edit the configuration
-# file and change GRUB_TIMEOUT=0
+# Skip boot options: Edit the configuration file and change GRUB_TIMEOUT=0
 sudo nano /etc/default/grub
 
 # Update grub
