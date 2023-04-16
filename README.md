@@ -2,7 +2,9 @@
 
 2. My Debian post-install task list is my best friend. It is my life. I must master it as I must master my life.
 
-3. My Debian post-install task list, without me, is useless. Without my Debian post-install task list, I am useless. They are to be performed in the order shown.
+3. My Debian post-install task list, without me, is useless. Without my Debian post-install task list, I am useless.
+
+The steps are to be performed in the order shown.
 <br><br>
 
 <details>
