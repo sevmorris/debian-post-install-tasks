@@ -147,26 +147,3 @@ sudo reboot
 ---
 
 </details>
-<br>
-
-### Miscellany
-
-<details>
-  <summary>Run Deborphan</summary>
-
-<br>
-Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
-<br><br>
-
-```
-# Start out with a dry run:
-deborphan --guess-all
-
-# Remove unnecessary data packages:
-sudo deborphan --guess-data | xargs sudo aptitude -y purge
-
-# Delete unnecessary libraries:
-sudo deborphan | xargs sudo apt-get -y remove --purge
-```
-
----
