@@ -6,7 +6,7 @@
 
 <br>
 
-The steps are to be performed in the order shown.
+_The steps are to be performed in the order shown._
 <br>
 
 <details>
