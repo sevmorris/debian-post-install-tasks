@@ -118,16 +118,23 @@ sudo reboot
 ### Miscellany
 
 <details>
-  <summary>Add root password</summary>
+  <summary>Root password, new user, sudoers</summary>
 <br>
 
 ```
-# Switch to root and add a password:
+# Add a root password:
 sudo -i
 passwd
 
-# To switch to the root shell
- su -
+# Switch to root
+su -
+
+# Create new user (change {username} to desired username) and add a password
+useradd -m {username} -s /bin/bash
+passwd {username}
+
+# Add new user to sudoers
+usermod -aG sudo {username}
 ```
 
 ---
@@ -150,24 +157,6 @@ sudo deborphan --guess-data | xargs sudo aptitude -y purge
 
 # Delete unnecessary libraries:
 sudo deborphan | xargs sudo apt-get -y remove --purge
-```
-
----
-
-</details>
-
-<details>
-  <summary>Add a user to sudoers</summary>
-
-<br>
-
-
-```
-# Switch to root
-su - root
-
-# Add user (change <user> to correct username)
-usermod -aG sudo <user>
 ```
 
 ---
