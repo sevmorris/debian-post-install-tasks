@@ -1,5 +1,5 @@
 
-### Debian Post-Install Tasks & Miscellany
+### Debian Post-Install Tasks
 <br>
 
 <details>
