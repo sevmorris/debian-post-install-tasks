@@ -153,7 +153,7 @@ figlet Debian!
 neofetch
 ```
 
-<br>
+
 Reload .bashrc
 
 `source ~/.bashrc`
