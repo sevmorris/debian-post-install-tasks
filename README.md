@@ -92,21 +92,21 @@ ip a | grep "inet "﻿
   <summary>Boot to console and skip GRUB boot options</summary>
 
 ```
-# Find which target unit is used by default:
-systemctl get-default
-
-# To change boot target to the text mode:
+# To change boot target to console mode
 sudo systemctl set-default multi-user.target
 
-# To change boot target back to the GUI mode:
+# To change boot target back to the GUI mode
 sudo systemctl set-default graphical.target
 
 # To skip boot options, edit the configuration
-# file and change GRUB_TIMEOUT=0 
+# file and change GRUB_TIMEOUT=0
 sudo nano /etc/default/grub
 
-# Reboot the system:
-sudo systemctl reboot
+# Update grub
+sudo update-grub
+
+# Reboot the system
+sudo reboot
 
 ```
 
