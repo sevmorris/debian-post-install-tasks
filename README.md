@@ -131,9 +131,11 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 </details>
 
 <details>
-  <summary>Edit .bashrc</summary>
+  <summary>.bashrc</summary>
 
  ---
+
+Edit .bashrc:
 
 `nano ~/.bashrc`
 
