@@ -11,6 +11,7 @@
 sudo apt update
 sudo apt upgrade
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
+sudo apt install build-essential dkms linux-headers-$(uname -r)
 ```
 
 <br>
@@ -150,6 +151,23 @@ And finally:
 ---
 
 </details>
+
+<details>
+  <summary>Boot straight into Debian</summary>
+
+<br>
+Open the GRUB config file and set GRUB_TIMEOUT to 0
+
+`sudo nano /etc/default/grub`
+
+<br>
+Update GRUB
+
+`sudo update-grub`
+
+---
+
+</details>
 <br>
 
 ### Miscellany
@@ -204,15 +222,13 @@ Delete unnecessary libraries:
   <summary>Add a user to sudoers</summary>
 
 <br>
-Edit sudoers file:
-<br>
+Switch to root
 
-`visudo`
+`su - root`
 
 <br>
-Add the following to the bottom (changing username):
-<br>
+Add user (change <user> to correct username)
 
-`username ALL=(ALL) NOPASSWD:ALL`
+`usermod -aG sudo <user>`
 
 ---
