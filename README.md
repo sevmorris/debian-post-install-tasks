@@ -66,7 +66,7 @@ ip a | grep "inet "﻿
   <summary>Configure Key-based SSH Authentication</summary>
 
 ```
-# Do on the local machine, but skip if you already have a key pair:
+# Generate keys on the local machine (skip if you already have a key pair):
 ssh-keygen -t rsa
 
 # Copy contents of public key file to remote authorized_keys file, changing {user} & {ip} as needed:
