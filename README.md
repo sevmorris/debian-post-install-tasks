@@ -65,22 +65,22 @@ source ~/.bashrc
   <summary>Set up ssh</summary>
 
 ```
-# Enable and start sshd at boot time:
+# Enable and start sshd at boot time
 sudo systemctl enable ssh.service
 
-# Confirm sshd is enabled at boot time:
+# Confirm sshd is enabled at boot time
 sudo systemctl is-enabled ssh.service
 
-# Check server status:
+# Check server status
 sudo service ssh status
 
-# Start sshd:
+# Start sshd
 sudo systemctl start ssh.service
 
-# Restart the server:
+# Restart the server
 sudo systemctl restart ssh.service
 
-# Show ip address:
+# Show ip address
 ip a | grep "inet "﻿
 ```
 
@@ -89,45 +89,25 @@ ip a | grep "inet "﻿
 </details>
 
 <details>
-  <summary>Boot to console (for hosts I'll only ssh into)</summary>
+  <summary>Boot to console and skip GRUB boot options</summary>
 
 ```
-#Backup the configuration file:
-sudo cp -n /etc/default/grub /etc/default/grub.backup
+# Find which target unit is used by default:
+systemctl get-default
 
-# Edit the configuration file:
-sudo nano /etc/default/grub
-
-# Comment out (disable) GRUB_CMDLINE_LINUX_DEFAULT:
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"`
-
-# Change GRUB_CMDLINE_LINUX "" to:
-GRUB_CMDLINE_LINUX="text"
-
-# Uncomment (enable) GRUB_TERMINAL:
-
-GRUB_TERMINAL="console"
-
-# Save the file and apply changes:
-sudo update-grub
-
-# And finally:
+# To change boot target to the text mode:
 sudo systemctl set-default multi-user.target
-```
 
----
+# To change boot target back to the GUI mode:
+sudo systemctl set-default graphical.target
 
-</details>
-
-<details>
-  <summary>Boot straight into Debian</summary>
-
-```
-# Open the GRUB config file and set GRUB_TIMEOUT to 0
+# To skip boot options, edit the configuration
+# file and change GRUB_TIMEOUT=0 
 sudo nano /etc/default/grub
 
-# Update GRUB
-sudo update-grub
+# Reboot the system:
+sudo systemctl reboot
+
 ```
 
 ---
