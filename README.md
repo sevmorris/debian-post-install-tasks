@@ -2,6 +2,9 @@
 ### Debian Post-Install Tasks
 <br>
 
+These are my tasks, to be performed in the order shown.
+<br>
+
 <details>
   <summary>Add root password/add new user/add user to sudoers</summary>
 <br>
@@ -118,9 +121,6 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 <details>
   <summary>Edit .bashrc</summary>
-<br>
-
-_This assumes I've installed everything above_
 <br>
 
 Change the theme to `Zork`
