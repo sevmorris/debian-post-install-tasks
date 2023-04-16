@@ -75,10 +75,10 @@ scp ~/.ssh/id_rsa.pub {user}@{ip}:
 
 # Log into remote machine
 
-# Create (or append to) authorized_keys file:
+# Create .ssh directory (if it doesn't already exist):
 mkdir -p .ssh
 
-# Copy pub key to it:
+# Copy pub key to authorized_keys file (will be created if it doesn't exist):
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # Clean up:
