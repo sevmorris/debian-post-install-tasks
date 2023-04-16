@@ -122,12 +122,11 @@ sudo reboot
 <br>
 
 ```
-# Add a root password:
-sudo -i
-passwd
-
 # Switch to root
 su -
+
+# Add (or change from default) root password:
+passwd
 
 # Create new user (change {username} to desired username) and add a password
 useradd -m {username} -s /bin/bash
@@ -135,7 +134,11 @@ passwd {username}
 
 # Add new user to sudoers
 usermod -aG sudo {username}
+
+# Exit root environment
+exit
 ```
+
 
 ---
 
