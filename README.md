@@ -222,13 +222,14 @@ Delete unnecessary libraries:
   <summary>Add a user to sudoers</summary>
 
 <br>
-Switch to root
 
-`su - root`
 
-<br>
-Add user (change <user> to correct username)
+```
+# switch to root
+su - root
 
-`usermod -aG sudo <user>`
+# Add user (change <user> to correct username)
+usermod -aG sudo <user>
+```
 
 ---
