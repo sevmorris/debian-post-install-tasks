@@ -5,36 +5,25 @@
 <details>
   <summary>Install some things</summary>
 
-<br>
-
 ```
+# Run each line separately
 sudo apt update
 sudo apt upgrade
 sudo apt -y install curl openssh-server ii git figlet tldr neofetch deborphan aptitude htop
 sudo apt install build-essential dkms linux-headers-$(uname -r)
-```
 
-<br>
-Install Github CLI
-<br>
-(Paste and run all lines together)
-<br><br>
+# Install Oh My Bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-```
+# Install Github CLI
+# (Paste and run the following all at once)
+
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
 && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
 && sudo apt update \
 && sudo apt install gh -y
-```
-
-<br>
-Install Oh My Bash
-<br><br>
-
-```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ```
 
 ---
@@ -50,10 +39,9 @@ _This assumes I've installed everything above_
 
 Change the theme to `Zork`
 
-Paste the following at the bottom of .bashrc:
-<br>
-
 ```
+# Paste the following at the bottom of .bashrc:
+
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
 echo "$(tput bold)$(tput setaf 3)"
@@ -62,10 +50,10 @@ figlet Debian!
 neofetch
 ```
 
-Reload .bashrc
-<br>
-
-`source .bashrc`
+```
+# Reload .bashrc
+source .bashrc
+```
 
 ---
 
