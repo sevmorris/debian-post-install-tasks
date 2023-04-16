@@ -3,6 +3,34 @@
 <br>
 
 <details>
+  <summary>Add a root password, add a new user, add new user to sudoers</summary>
+<br>
+
+```
+# Switch to root
+su -
+
+# Add (or change from default) root password:
+passwd
+
+# Create new user (changing {username} to desired username)
+useradd {username}
+
+# Add the new user to sudoers
+usermod -aG sudo {username}
+
+# Exit root
+exit
+
+# Switch to the new user
+su {username}
+```
+
+---
+
+</details>
+
+<details>
   <summary>Install some things</summary>
 
 ```
@@ -116,35 +144,6 @@ sudo reboot
 <br>
 
 ### Miscellany
-
-<details>
-  <summary>Add a root password, add a new user, add new user to sudoers</summary>
-<br>
-
-```
-# Switch to root
-su -
-
-# Add (or change from default) root password:
-passwd
-
-# Create new user (changing {username} to desired username)
-useradd -m {username} -s /bin/bash
-
-# And add a password
-passwd {username}
-
-# Add the new user to sudoers
-usermod -aG sudo {username}
-
-# Switch to the new user
-su {username}
-```
-
-
----
-
-</details>
 
 <details>
   <summary>Run Deborphan</summary>
