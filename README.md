@@ -19,11 +19,17 @@ useradd {username}
 # Add the new user to sudoers
 usermod -aG sudo {username}
 
+# Check if the change was successful:
+groups {username}
+
 # Exit root
 exit
 
 # Switch to the new user
 su {username}
+
+# Test sudo by listing the contents of the /root directory
+sudo ls -la /root
 ```
 
 ---
