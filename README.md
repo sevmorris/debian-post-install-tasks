@@ -144,3 +144,15 @@ sudo reboot
 ---
 
 </details>
+
+### Miscellany
+
+<details>
+  <summaryInstall all available free and non-free device firmware</summary>
+
+```
+# Enter root password when prompted
+su - -c 'apt-get install -y firmware-linux firmware-misc-nonfree'
+```
+
+---
