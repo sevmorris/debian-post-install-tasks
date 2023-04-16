@@ -1,9 +1,12 @@
 
 ### Debian Post-Install Tasks
-<br>
 
-These are my tasks, to be performed in the order shown.
-<br>
+1. This is my Debian post-install task list. There are many like it, but this one is mine.
+
+2. My Debian post-install task list is my best friend. It is my life. I must master it as I must master my life.
+
+3. My Debian post-install task list, without me, is useless. Without my Debian post-install task list, I am useless. They are to be performed in the order shown.
+<br><br>
 
 <details>
   <summary>Add root password/add new user/add user to sudoers</summary>
