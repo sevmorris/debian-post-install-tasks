@@ -63,7 +63,7 @@ ip a | grep "inet "﻿
 </details>
 
 <details>
-  <summary>Configure Key-based SSH Authentication</summary>
+  <summary>Configure key-based SSH authentication</summary>
 
 ```
 # Generate keys on the local machine (skip if you already have a key pair):
