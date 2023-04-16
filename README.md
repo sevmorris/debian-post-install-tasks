@@ -37,6 +37,33 @@ sudo ls -la /root
 </details>
 
 <details>
+  <summary>Set up ssh</summary>
+
+```
+# Enable and start sshd at boot time
+sudo systemctl enable ssh.service
+
+# Confirm sshd is enabled at boot time
+sudo systemctl is-enabled ssh.service
+
+# Check server status
+sudo service ssh status
+
+# Start sshd
+sudo systemctl start ssh.service
+
+# Restart the server
+sudo systemctl restart ssh.service
+
+# Show ip address
+ip a | grep "inet "﻿
+```
+
+---
+
+</details>
+
+<details>
   <summary>Install some things</summary>
 
 ```
@@ -89,33 +116,6 @@ Reload .bashrc
 
 ```
 source ~/.bashrc
-```
-
----
-
-</details>
-
-<details>
-  <summary>Set up ssh</summary>
-
-```
-# Enable and start sshd at boot time
-sudo systemctl enable ssh.service
-
-# Confirm sshd is enabled at boot time
-sudo systemctl is-enabled ssh.service
-
-# Check server status
-sudo service ssh status
-
-# Start sshd
-sudo systemctl start ssh.service
-
-# Restart the server
-sudo systemctl restart ssh.service
-
-# Show ip address
-ip a | grep "inet "﻿
 ```
 
 ---
