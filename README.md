@@ -127,9 +127,6 @@ source ~/.bashrc
 # To change boot target to console mode
 sudo systemctl set-default multi-user.target
 
-# To change boot target back to the GUI mode
-sudo systemctl set-default graphical.target
-
 # To skip boot options, edit the configuration
 # file and change GRUB_TIMEOUT=0
 sudo nano /etc/default/grub
