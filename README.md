@@ -60,6 +60,27 @@ ip a | grep "inet "﻿
 
 ---
 
+<details>
+  <summary>Configure Key-based SSH Authentication</summary>
+
+```
+# Do on the local machine, but skip if you already have a key pair:
+ssh-keygen -t rsa
+
+# Copy contents of public key file to remote authorized_keys file, changing {user} & {ip} as needed:
+scp ~/.ssh/id_rsa.pub {user}@{ip}:
+
+# Log into remote machine
+
+# Create (or append to) authorized_keys file, copy pub key to it, then clean up:
+mkdir -p .ssh
+cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+rm ~/id_rsa.pub
+
+---
+
+</details>
+
 </details>
 
 <details>
