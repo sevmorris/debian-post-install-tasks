@@ -81,6 +81,8 @@ ip a | grep "inet "﻿
 # Generate keys on the local machine (skip if you already have a key pair):
 ssh-keygen -t rsa
 
+# It is strongly advised that you give the key a strong passphrase...
+
 # Copy contents of public key to remote authorized_keys
 # file (change {user} & {ip} as needed):
 scp ~/.ssh/id_rsa.pub {user}@{ip}:
