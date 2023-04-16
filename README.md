@@ -77,8 +77,10 @@ scp ~/.ssh/id_rsa.pub {user}@{ip}:
 
 # Create (or append to) authorized_keys file:
 mkdir -p .ssh
+
 # Copy pub key to it:
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+
 # Clean up:
 rm ~/id_rsa.pub
 ```
