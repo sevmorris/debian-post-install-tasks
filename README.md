@@ -63,9 +63,6 @@ sudo service ssh status
 # Start sshd
 sudo systemctl start ssh.service
 
-# Restart the server
-sudo systemctl restart ssh.service
-
 # Show ip address
 ip a | grep "inet "﻿
 ```
