@@ -50,7 +50,7 @@ sudo ls -la /root
 
 ---
 
-```
+```console
 # Enable and start sshd at boot time
 sudo systemctl enable ssh.service
 
@@ -76,7 +76,7 @@ ip a | grep "inet "﻿
 
 ---
 
-```
+```console
 # Generate keys on the local machine (skip if you already have a key pair):
 ssh-keygen -t rsa
 
@@ -107,7 +107,7 @@ rm ~/id_rsa.pub
 
 ---
 
-```
+```console
 # Run each line separately
 sudo apt update
 sudo apt upgrade
@@ -144,7 +144,7 @@ Edit .bashrc:
 Change the theme to `Zork` then paste the following at the bottom of .bashrc:
 <br><br>
 
-```
+```console
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
 # The text after "figlet" is displayed, so change it as desired...
@@ -168,7 +168,7 @@ Reload .bashrc
 
 ---
 
-```
+```console
 # Change boot target to console mode
 sudo systemctl set-default multi-user.target
 
