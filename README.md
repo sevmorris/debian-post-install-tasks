@@ -11,7 +11,7 @@ _The steps are to be performed in the order shown._
 
 <details>
   <summary>Add root password/add new user/add user to sudoers</summary>
-<br>
+---
 
 ```
 # Switch to root
@@ -44,6 +44,7 @@ sudo ls -la /root
 
 <details>
   <summary>Set up ssh</summary>
+---
 
 ```
 # Enable and start sshd at boot time
@@ -71,6 +72,7 @@ ip a | grep "inet "﻿
 
 <details>
   <summary>Configure key-based ssh authentication</summary>
+---
 
 ```
 # Generate keys on the local machine (skip if you already have a key pair):
@@ -98,6 +100,7 @@ rm ~/id_rsa.pub
 
 <details>
   <summary>Install some things</summary>
+---
 
 ```
 # Run each line separately
@@ -125,7 +128,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 <details>
   <summary>Edit .bashrc</summary>
-<br>
+ ---
 
 `nano ~/.bashrc`
 
@@ -142,10 +145,10 @@ figlet Debian!
 neofetch
 ```
 
-```
-# Reload .bashrc
-source ~/.bashrc
-```
+<br>
+Reload .bashrc
+
+`source ~/.bashrc`
 
 ---
 
@@ -153,6 +156,7 @@ source ~/.bashrc
 
 <details>
   <summary>Boot to console/skip GRUB boot menu</summary>
+---
 
 ```
 # Change boot target to console mode
