@@ -138,7 +138,9 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 Edit .bashrc:
 
-`nano ~/.bashrc`
+```console
+nano ~/.bashrc
+```
 
 <br>
 Change the theme to `Zork` then paste the following at the bottom of .bashrc:
