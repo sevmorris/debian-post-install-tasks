@@ -111,10 +111,8 @@ figlet Debian!
 neofetch
 ```
 
-<br>
-Reload .bashrc
-
 ```
+# Reload .bashrc
 source ~/.bashrc
 ```
 
