@@ -176,16 +176,14 @@ Update GRUB
   <summary>Add root password</summary>
 <br>
 
-Switch to root and add a password:
+```
+# Switch to root and add a password:
+sudo -i
+passwd
 
-`sudo -i`
-
-`passwd`
-
-<br>
-To switch to the root shell
-
- `su -`
+# To switch to the root shell
+ su -
+```
 
 ---
 
@@ -198,21 +196,16 @@ To switch to the root shell
 Deborphan finds "orphaned" packages on your system. It determines which packages have no other packages depending on their installation and shows you a list of these packages. It is most useful when finding libraries, but it can be used on packages in all sections.
 <br>
 
-<br>
-Start out with a dry run:
+```
+# Start out with a dry run:
+deborphan --guess-all
 
+# Remove unnecessary data packages:
+sudo deborphan --guess-data | xargs sudo aptitude -y purge
 
-`deborphan --guess-all`
-
-<br>
-Remove unnecessary data packages:
-
-`sudo deborphan --guess-data | xargs sudo aptitude -y purge`
-
-<br>
-Delete unnecessary libraries:
-
-`sudo deborphan | xargs sudo apt-get -y remove --purge`
+# Delete unnecessary libraries:
+sudo deborphan | xargs sudo apt-get -y remove --purge
+```
 
 ---
 
@@ -225,7 +218,7 @@ Delete unnecessary libraries:
 
 
 ```
-# switch to root
+# Switch to root
 su - root
 
 # Add user (change <user> to correct username)
