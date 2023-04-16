@@ -60,6 +60,8 @@ ip a | grep "inet "﻿
 
 ---
 
+</details>
+
 <details>
   <summary>Configure Key-based SSH Authentication</summary>
 
@@ -78,8 +80,6 @@ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 rm ~/id_rsa.pub
 
 ---
-
-</details>
 
 </details>
 
