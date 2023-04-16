@@ -16,7 +16,7 @@ Log into the new Debian machine using the default credentials, open a terminal, 
 
 ---
 
-```
+```console
 # Switch to root
 su -
 
