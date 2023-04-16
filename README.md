@@ -3,7 +3,7 @@
 <br>
 
 <details>
-  <summary>Add a root password, add a new user, add new user to sudoers</summary>
+  <summary>Add root password/add new user/add user to sudoers</summary>
 <br>
 
 ```
@@ -123,7 +123,7 @@ ip a | grep "inet "﻿
 </details>
 
 <details>
-  <summary>Boot to console and skip GRUB boot options</summary>
+  <summary>Boot to console/skip GRUB boot menu</summary>
 
 ```
 # To change boot target to console mode
