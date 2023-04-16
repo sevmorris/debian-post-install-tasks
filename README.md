@@ -78,6 +78,7 @@ scp ~/.ssh/id_rsa.pub {user}@{ip}:
 mkdir -p .ssh
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 rm ~/id_rsa.pub
+```
 
 ---
 
