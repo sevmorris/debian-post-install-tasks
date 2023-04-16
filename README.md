@@ -128,11 +128,13 @@ su -
 # Add (or change from default) root password:
 passwd
 
-# Create new user (change {username} to desired username) and add a password
+# Create new user (changing {username} to desired username)
 useradd -m {username} -s /bin/bash
+
+# And add a password
 passwd {username}
 
-# Add new user to sudoers
+# Add the new user to sudoers
 usermod -aG sudo {username}
 
 # Exit root environment
