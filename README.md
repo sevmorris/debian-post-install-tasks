@@ -11,6 +11,7 @@ _The steps are to be performed in the order shown._
 
 <details>
   <summary>Add root password/add new user/add user to sudoers</summary>
+
 ---
 
 ```
@@ -44,6 +45,7 @@ sudo ls -la /root
 
 <details>
   <summary>Set up ssh</summary>
+
 ---
 
 ```
@@ -72,6 +74,7 @@ ip a | grep "inet "﻿
 
 <details>
   <summary>Configure key-based ssh authentication</summary>
+
 ---
 
 ```
@@ -100,6 +103,7 @@ rm ~/id_rsa.pub
 
 <details>
   <summary>Install some things</summary>
+
 ---
 
 ```
@@ -128,6 +132,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
 <details>
   <summary>Edit .bashrc</summary>
+
  ---
 
 `nano ~/.bashrc`
@@ -156,6 +161,7 @@ Reload .bashrc
 
 <details>
   <summary>Boot to console/skip GRUB boot menu</summary>
+
 ---
 
 ```
