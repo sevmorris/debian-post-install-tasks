@@ -69,8 +69,8 @@ ip a | grep "inet "﻿
 # Generate keys on the local machine (skip if you already have a key pair):
 ssh-keygen -t rsa
 
-# Copy contents of public key file to remote authorized_keys file
-# (change {user} & {ip} as needed):
+# Copy contents of public key to remote authorized_keys
+# file (change {user} & {ip} as needed):
 scp ~/.ssh/id_rsa.pub {user}@{ip}:
 
 # Log into remote machine
@@ -78,7 +78,7 @@ scp ~/.ssh/id_rsa.pub {user}@{ip}:
 # Create .ssh directory (if it doesn't already exist):
 mkdir -p .ssh
 
-# Copy pub key to authorized_keys file (will be created if it doesn't exist):
+# Copy public key to authorized_keys file (will be created if it doesn't exist):
 cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # Clean up:
