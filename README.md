@@ -51,10 +51,10 @@ sudo ls -la /root
 ---
 
 ```console
-# Enable and start sshd at boot time
+# Enable and start sshd at boot \time
 sudo systemctl enable ssh.service
 
-# Confirm sshd is enabled at boot time
+# Confirm sshd is enabled at boot \time
 sudo systemctl is-enabled ssh.service
 
 # Check server status
