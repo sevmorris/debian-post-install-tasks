@@ -111,8 +111,7 @@ rm ~/id_rsa.pub
 # Run each line separately
 sudo apt update
 sudo apt upgrade
-sudo apt -y install aptitude curl figlet git htop neofetch openssh-server ii tldr
-sudo apt install build-essential dkms linux-headers-$(uname -r)
+sudo apt -y install cmatrix curl dkms figlet git htop neofetch net-tools nmon openssh-server ii tldr
 
 # Install Oh My Bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
