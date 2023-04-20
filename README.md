@@ -88,11 +88,9 @@ scp ~/.ssh/id_rsa.pub {user}@{ip}:
 
 # Log into remote machine
 
-# Create .ssh directory (if it doesn't already exist):
-mkdir -p .ssh
-
-# Copy public key to authorized_keys file (will be created if it doesn't exist):
-cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
+# Create .ssh directory (if it doesn't already exist), then copy
+# public key to authorized_keys file (will be created if it doesn't exist):
+mkdir -p .ssh && cat ~/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # Clean up:
 rm ~/id_rsa.pub
@@ -109,8 +107,7 @@ rm ~/id_rsa.pub
 
 ```console
 # Run each line separately
-sudo apt update
-sudo apt upgrade
+sudo apt update && sudo apt -y upgrade
 sudo apt -y install cmatrix curl dkms figlet git htop neofetch net-tools nmon openssh-server ii tldr
 
 # Install Oh My Bash
@@ -158,7 +155,7 @@ echo ""
 neofetch
 ```
 
-Create a file to disable the boot message/warning:
+Create a file to suppress the boot message/warning:
 
 ```console
 touch ~/.hushlogin
