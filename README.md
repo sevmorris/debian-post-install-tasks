@@ -140,7 +140,7 @@ sed -i 's/font/zork/g' ~/.bashrc
 ```
 
 <br>
-Append some stuff to the bottom of .bashrc:
+Append some stuff to the bottom of .bashrc (paste and execute everything below):
 
 ```console
 cat >> ~/.bashrc << EOL
