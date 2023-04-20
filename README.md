@@ -131,7 +131,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 </details>
 
 <details>
-  <summary>.bashrc</summary>
+  <summary>.bashrc & .hushlogin</summary>
 
  ---
 
@@ -153,6 +153,12 @@ echo "$(tput bold)$(tput setaf 3)"
 figlet Debian!
 
 neofetch
+```
+
+Create a file to disable the boot message/warning:
+
+```console
+touch ~/.hushlogin
 ```
 
 Reload .bashrc
