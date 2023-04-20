@@ -132,27 +132,27 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 
  ---
 
-Edit .bashrc:
+<br>
+Change the Oh My Bash theme to `Zork`:
 
 ```console
-nano ~/.bashrc
+sed -i 's/font/zork/g' ~/.bashrc
 ```
 
 <br>
-Change the theme to `Zork` then paste the following at the bottom of .bashrc:
-<br><br>
+Append some stuff to the bottom of .bashrc:
 
 ```console
+cat >> ~/.bashrc << EOL
+
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
 # The text after "figlet" is displayed, so change it as desired...
-echo "$(tput bold)$(tput setaf 3)"
 figlet Debian!
-
-# Give them a little space
 echo ""
 
 neofetch
+EOL
 ```
 
 Create a file to suppress the boot message/warning:
