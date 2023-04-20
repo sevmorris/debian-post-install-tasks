@@ -141,11 +141,12 @@ sed -i 's/font/zork/g' ~/.bashrc
 
 <br>
 Append stuff to the bottom of .bashrc (paste and execute everything below):
+_Due credit to [Mako-Wish](https://askubuntu.com/users/885743/mako-wish) for the [update alias](https://askubuntu.com/questions/118025/bypass-the-yes-no-prompt-in-apt-get-upgrade/1305901#1305901)_
 
 ```console
 cat >> ~/.bashrc << EOL
- 
-# Credit to [Mako-Wish](https://askubuntu.com/users/885743/mako-wish) for this [rather comprehensive update alias](https://askubuntu.com/questions/118025/bypass-the-yes-no-prompt-in-apt-get-upgrade/1305901#1305901):
+
+# A rather comprehensive update alias:
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
 # The text after figlet is displayed as an ASCII text banner, so change it as desired...
