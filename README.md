@@ -140,7 +140,7 @@ sed -i 's/font/zork/g' ~/.bashrc
 ```
 
 <br>
-Append stuff to the bottom of .bashrc (paste and execute everything below):<br>
+Append some things to the bottom of .bashrc (paste and execute the entire code block below):<br>
 
 _Due credit to [Mako-Wish](https://askubuntu.com/users/885743/mako-wish) for the [update alias](https://askubuntu.com/questions/118025/bypass-the-yes-no-prompt-in-apt-get-upgrade/1305901#1305901)_
 
