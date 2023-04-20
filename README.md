@@ -152,6 +152,9 @@ alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" d
 echo "$(tput bold)$(tput setaf 3)"
 figlet Debian!
 
+# Give them a little space
+echo ""
+
 neofetch
 ```
 
