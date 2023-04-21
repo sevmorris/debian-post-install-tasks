@@ -189,10 +189,8 @@ source ~/.bashrc
 # Change boot target to console mode
 sudo systemctl set-default multi-user.target
 
-# Skip boot options: Change GRUB_TIMEOUT=0
-sudo nano /etc/default/grub
-
-# Update grub
+# Skip boot options
+sudo sed -i 's/GRUB_TIMEOUT=.*/GRUB_TIMEOUT=0/' /etc/default/grub
 sudo update-grub
 
 # Reboot the system
