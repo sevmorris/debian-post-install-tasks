@@ -17,7 +17,7 @@ Log into the new Debian machine using the default credentials, open a terminal, 
 
 
 <details>
-  <summary>1) Add root password/add new user/add user to sudoers</summary>
+  1) <summary> Add root password/add new user/add user to sudoers</summary>
 
 ---
 
