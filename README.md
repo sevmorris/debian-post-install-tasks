@@ -83,7 +83,7 @@ ip a | grep "inet "﻿
 ---
 
 ```console
-# Generate keys on the local machine (skip if you already have a key pair):
+# Generate keys on the LOCAL machine (skip if you already have a key pair):
 ssh-keygen -t rsa
 
 # It is strongly advised that you give the key a strong passphrase...
