@@ -1,6 +1,5 @@
 ### MY Debian Post-Install Tasks
-
-<br>
+---
 
 1. This is my Debian post-install task list. There are many like it, but this one is mine.
 
