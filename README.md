@@ -201,3 +201,9 @@ sudo reboot
 ---
 
 </details>
+
+Now take a break!
+
+```console
+cmatrix | lolcat
+```
