@@ -70,7 +70,7 @@ sudo service ssh status
 sudo systemctl start ssh.service
 
 # Show ip address
-ip a | grep "inet "﻿
+hostname -I﻿
 ```
 
 ---
