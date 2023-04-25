@@ -116,9 +116,6 @@ rm ~/id_rsa.pub
 sudo apt update && sudo apt -y upgrade
 sudo apt -y install cmatrix curl dkms figlet git htop lolcat neofetch net-tools nmon openssh-server ii tldr
 
-# Install Oh My Bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-
 # Install Github CLI (run the following all at once)
 
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -128,6 +125,9 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 && sudo apt update \
 && sudo apt install gh -y
 ```
+
+# Install Oh My Bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 ---
 
