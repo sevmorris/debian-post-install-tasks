@@ -162,8 +162,11 @@ EOL
 
 # Create a file to suppress the boot message/warning:
 touch ~/.hushlogin
+```
 
-# Reload .bashrc
+Reload .bashrc
+
+```console
 source ~/.bashrc
 ```
 
