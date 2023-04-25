@@ -139,18 +139,14 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
  ---
 
 <br>
-Change Oh My Bash theme to my preference (Zork):
-
-```console
-sed -i 's/font/zork/g' ~/.bashrc
-```
-
-<br>
-Append some things to the bottom of .bashrc (paste and execute the entire code block below):<br>
+Change Oh My Bash theme to my preference (Zork) and append some things to the bottom of .bashrc (paste and execute the entire code block below):
 
 _Due credit to [Mako-Wish](https://askubuntu.com/users/885743/mako-wish) for the [update alias](https://askubuntu.com/questions/118025/bypass-the-yes-no-prompt-in-apt-get-upgrade/1305901#1305901)_
 
+
 ```console
+sed -i 's/font/zork/g' ~/.bashrc
+
 cat >> ~/.bashrc << EOL
 
 # A rather comprehensive update alias:
@@ -162,17 +158,11 @@ echo "" # Just to add a little space bellow the banner
 
 neofetch
 EOL
-```
 
-Create a file to suppress the boot message/warning:
-
-```console
+# Create a file to suppress the boot message/warning:
 touch ~/.hushlogin
-```
 
-Reload .bashrc
-
-```console
+# Reload .bashrc
 source ~/.bashrc
 ```
 
