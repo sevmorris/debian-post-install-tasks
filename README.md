@@ -159,10 +159,15 @@ echo "" # Just to add a little space bellow the banner
 
 neofetch
 EOL
+```
 
-# Create a file to suppress the boot message/warning:
+Create a file to suppress the boot message/warning:
+
+```console
 touch ~/.hushlogin
 ```
+
+<br>
 
 Reload .bashrc
 
