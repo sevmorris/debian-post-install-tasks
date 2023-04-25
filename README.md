@@ -138,9 +138,8 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 
  ---
 
-<br>
 Change Oh My Bash theme to my preference (Zork) and append some things to the bottom of .bashrc (paste and execute the entire code block below):
-
+<br>
 _Due credit to [Mako-Wish](https://askubuntu.com/users/885743/mako-wish) for the [update alias](https://askubuntu.com/questions/118025/bypass-the-yes-no-prompt-in-apt-get-upgrade/1305901#1305901)_
 
 
