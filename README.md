@@ -89,8 +89,8 @@ ssh-keygen -t rsa
 # It is strongly advised that you give the key a strong passphrase...
 
 # Copy contents of public key to remote authorized_keys
-# file (change {user} & {ip} as needed):
-scp ~/.ssh/id_rsa.pub {user}@{ip}:
+# file (change <user> and <ip> as needed):
+scp ~/.ssh/id_rsa.pub <user>@<ip>:
 
 # Log into remote machine
 
@@ -163,10 +163,9 @@ echo "" # Just to add a little space bellow the banner
 neofetch
 EOL
 
-# Create a file to suppress the boot message/warning:
+# Create an empty file to suppress the boot message/warning:
 touch ~/.hushlogin
 
-# Reload .bashrc
 source ~/.bashrc
 ```
 
