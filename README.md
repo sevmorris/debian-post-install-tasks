@@ -159,8 +159,10 @@ PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH})
 # A rather comprehensive update alias:
 alias update='sudo apt update && sudo apt -o Dpkg::Options::="--force-confdef" dist-upgrade -y && sudo apt autoremove -y && if sudo test -f /var/run/reboot-required; then read -p "A reboot is required to finish installing updates. Press [ENTER] to reboot now, or [CTRL+C] to cancel and reboot later." && sudo reboot; else echo "A reboot is not required. Exiting..."; fi'
 
+alias nano="nano --linenumbers " # Show line numbers in nano
+
 # The text after figlet is displayed as an ASCII text banner, so change it as desired...
-figlet Debian!
+figlet Your Message Here!
 echo "" # Just to add a little space bellow the banner
 
 neofetch
