@@ -179,7 +179,7 @@ source ~/.bashrc
 Change the Figlet message (changing <your new message>):
 
 ```console
-sed -i 's/Your\ Message\ Here!/<your new message>/g' ~/.bashrc
+sed -i 's/Your Message Here!/<your NEW message>/g' ~/.bashrc
 
 source ~/.bashrc
 ```
