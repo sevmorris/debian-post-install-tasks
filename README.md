@@ -177,6 +177,7 @@ source ~/.bashrc
 
 <br>
 Change the Figlet message (changing "your NEW message" to whatever you want):
+<br>
 
 ```console
 sed -i 's/Your Message Here!/your NEW message/g' ~/.bashrc
