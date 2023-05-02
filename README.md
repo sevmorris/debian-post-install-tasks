@@ -175,6 +175,15 @@ touch ~/.hushlogin
 source ~/.bashrc
 ```
 
+<br>
+Change the Figlet message (changing <your new message>):
+
+```console
+sed -i 's/Your\ Message\ Here!/<your new message>/g' ~/.bashrc
+
+source ~/.bashrc
+```
+
 ---
 
 </details>
